@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="D:/WebDev/Midterm/Visual Template/stylesheets.css">
+	<title>Contact | Eddie Pina Photography</title>
+	<style>
+		.contact-form {
+			background: #fafafa;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		.contact-form h2 {
+			text-align: center;
+			color: #333;
+		}
+		.contact-form label {
+			display: block;
+			margin-top: 15px;
+			font-weight: bold;
+			color: #555;
+		}
+		.contact-form input, .contact-form textarea {
+			width: 100%;
+			padding: 10px;
+			margin-top: 5px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+		}
+		.contact-form button {
+			margin-top: 20px;
+			width: 100%;
+			padding: 12px;
+			background-color: #333;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+		.contact-form button:hover {
+			background-color: maroon;
+		}
+		.contact-info {
+			margin-top: 40px;
+			text-align: center;
+			font-size: 18px;
+			color: #666;
+		}
+		.hero {
+			background: url('https://images.unsplash.com/photo-1488805990569-3c9e1d76d51c') center/cover no-repeat;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 36px;
+			height: 300px;
+			text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- Header -->
+		<header>Eddie Pina Photography</header>
+
+		<!-- Navigation -->
+		<nav>
+			<ul>
+				<li><a href="index.html" title="home">Home</a></li>
+				<li><a href="about.html" title="about us">About Us</a></li>
+				<li><a href="services.html" title="services">Services</a></li>
+				<li><a href="contact.html" title="contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Hero Section -->
+		<div class="hero">Let's Connect</div>
+
+		<!-- Main Section -->
+		<main>
+			<section class="contact-form">
+				<h2>Get in Touch</h2>
+				<form action="#" method="post">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" required>
+
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required>
+
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="6" required></textarea>
+
+					<button type="submit">Send Message</button>
+				</form>
+
+				<div class="contact-info">
+					<p>Email: contact@eddiepinaphotography.com</p>
+					<p>Phone: (123) 456-7890</p>
+					<p>Location: Los Angeles, CA</p>
+				</div>
+			</section>
+		</main>
+
+		<!-- Content Section -->
+		<div class="content">
+			<figure class="figure">
+				<img src="https://picsum.photos/id/1012/150/150" alt="Studio">
+				<figcaption>Our Studio</figcaption>
+			</figure>
+			<figure class="figure">
+				<img src="https://picsum.photos/id/1027/150/150" alt="Equipment">
+				<figcaption>Top Equipment</figcaption>
+			</figure>
+			<figure class="figure">
+				<img src="https://picsum.photos/id/1020/150/150" alt="Sessions">
+				<figcaption>Custom Sessions</figcaption>
+			</figure>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			&#169; 2025 | Eddie Pina Photography
+		</footer>
+	</div>
+</body>
+</html>

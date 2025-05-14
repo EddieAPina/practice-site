@@ -1,148 +1,158 @@
+/*
+Name: Eddie Pina
+Date: 04/02/2025
+File Name: template.html
+*/
+
 /* General Styles */
 body {
-    margin: 0;
-    font-family: Aptos, sans-serif;
-  }
-  
-  /* Container Grid Layout */
+  margin: 0;
+  font-family: Aptos, sans-serif;
+}
+
+/* Container Grid Layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-areas:
+    "header nav"
+    "hero hero"
+    "main main"
+    "content content"
+    "footer footer";
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Header */
+header {
+  grid-area: header;
+  background: #333;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* Navigation */
+nav {
+  grid-area: nav;
+  background: #555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background: #777;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: maroon;
+  background-color: #999;
+}
+
+/* Hero Section */
+.hero {
+  width: 1670px;
+  height: 640px;
+  grid-area: hero;
+  background: #ccc;
+  background-position: center;
+  object-fit: cover;
+  text-align: center;
+  padding: 50px;
+  font-size: 24px;
+}
+
+/* Main Section */
+main {
+  grid-area: main;
+  background: #eee;
+  padding: 20px;
+  font-size: 18px;
+}
+
+/* Content Section */
+.content {
+  grid-area: content;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.figure {
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border: 1px solid #dedede;
+}
+
+.figure img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.figure figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background: #ddd;
+  text-align: center;
+  padding: 10px;
+}
+
+/*  Mobile */
+@media(max-width: 768px) {
   .container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto auto auto auto 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "header nav"
-      "hero hero"
-      "main main"
-      "content content"
-      "footer footer";
-    gap: 20px;
-    padding: 10px;
+      "header"
+      "nav"
+      "hero"
+      "main"
+      "content"
+      "footer";
   }
-  
-  /* Header */
-  header {
-    grid-area: header;
-    background: #333;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    padding: 20px;
-  }
-  
-  /* Navigation */
-  nav {
-    grid-area: nav;
-    background: #555;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
+
   nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    background: #777;
-    border-radius: 5px;
-  }
-  
-  nav ul li a:hover {
-    color: maroon;
-    background-color: #999;
-  }
-  
-  /* Hero Section */
-  .hero {
-    grid-area: hero;
-    background: #ccc;
-    text-align: center;
-    padding: 50px;
-    font-size: 24px;
-  }
-  
-  /* Main Section */
-  main {
-    grid-area: main;
-    background: #eee;
-    padding: 20px;
-    font-size: 18px;
-  }
-  
-  /* Content Section */
+
   .content {
-    grid-area: content;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background: #f4f4f4;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .figure {
-    text-align: center;
-    background: white;
-    padding: 10px;
-    border: 1px solid #dedede;
-  }
-  
-  .figure img {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .figure figcaption {
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: center;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  /* Footer */
-  footer {
-    grid-area: footer;
-    background: #ddd;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  /* Responsive Design for Mobile */
-  @media(max-width: 768px) {
-    .container {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "header"
-        "nav"
-        "hero"
-        "main"
-        "content"
-        "footer";
-    }
-  
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-  
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
-  /* Optional: Box-sizing reset */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
